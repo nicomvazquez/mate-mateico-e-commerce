@@ -21,12 +21,12 @@ function CartTag({ item }) {
       <img src={`api/img/${item.product.image}`} alt="" className="max-w-xs" />
       <div className="ml-5 flex flex-col justify-between">
         <div>
-          <h1 className="text-white font-semibold text-4xl ">
+          <h1 className="text-white font-semibold text-xl ">
             {item.product.name}
           </h1>
-          <p className="text-xl text-neutral-300">${item.product.price}</p>
+          <p className="text-lg text-neutral-300 my-3">${item.product.price}</p>
         </div>
-        <div className="flex gap-5 justify-center">
+        <div className="flex gap-5">
           <h1 className="text-white text-2xl">cantidad:</h1>
           <input
             type="number"

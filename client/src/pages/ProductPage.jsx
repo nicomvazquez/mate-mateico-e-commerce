@@ -40,11 +40,11 @@ function AdminProduct() {
         </div>
         <div className="pl-6 w-full flex flex-col justify-between">
           <div>
-            <h1 className="text-white text-6xl">{product.name}</h1>
-            <p className="text-2xl text-neutral-400">{product.description}</p>
+            <h1 className="text-white text-3xl">{product.name}</h1>
+            <p className="text-lg text-neutral-400 my-5">{product.description}</p>
           </div>
           <div>
-            <p className="text-white text-6xl my-10">${product.price}</p>
+            <p className="text-white text-5xl my-10">${product.price}</p>
             <div className="flex w-full justify-between items-center bottom-0">
               <button
                 onClick={() => {
