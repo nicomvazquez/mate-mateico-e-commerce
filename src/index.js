@@ -19,7 +19,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-config()
+
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
