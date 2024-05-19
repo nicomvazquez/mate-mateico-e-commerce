@@ -13,7 +13,7 @@ function ProductsPage() {
       <div className="mb-5">
         <h1 className="text-xl text-white pb-2">Filtrar por:</h1>
         <select
-          className="bg-neutral-100 w-full max-w-xs p-5 rounded-md sticky top-36"
+          className="bg-[#1E2019] text-white w-full max-w-xs text-lg p-2 rounded-md "
           onChange={(e) => {
             console.log(e.target.value);
             if (e.target.value == "todos") {

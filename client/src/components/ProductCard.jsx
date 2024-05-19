@@ -17,8 +17,8 @@ function ProductCard({ product }) {
         alt={product.name}
       />
       <div className="px-6 py-4">
-        <div className="text-white font-semibold text-xl mb-2">{product.name}</div>
-        <p className="text-slate-300 text-xl">${product.price}</p>
+        <h1 className="text-white text-xl mb-5">{product.name}</h1>
+        <p className="text-slate-300 font-extralight text-4xl">${product.price}</p>
       </div>
     </div>
   );
