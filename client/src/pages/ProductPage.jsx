@@ -30,7 +30,7 @@ function AdminProduct() {
 
   return (
     <div className="w-full">
-      <div className="max-w-7xl bg-[#1E2019] m-auto my-10 flex p-10">
+      <div className="max-w-7xl bg-[#1E2019] m-auto my-10 flex flex-col md:flex-row p-10">
         <div>
           <img
             className="max-w-xl w-screen"
