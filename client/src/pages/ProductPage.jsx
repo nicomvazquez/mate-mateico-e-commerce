@@ -30,7 +30,7 @@ function AdminProduct() {
 
   return (
     <div className="w-full">
-      <div className="max-w-7xl m-auto gap-5 p-3 my-10 flex flex-col md:flex-row">
+      <div className="max-w-7xl bg-[#1E2019] m-auto my-10 flex p-10">
         <div>
           <img
             className="w-full rounded-lg"
@@ -59,7 +59,9 @@ function AdminProduct() {
                 Agregar al carrito
               </button>
 
-              <p className="text-lg text-neutral-400">stock disponible: {product.stock}</p>
+              <p className="text-lg text-neutral-400">
+                stock disponible: {product.stock}
+              </p>
             </div>
           </div>
         </div>
