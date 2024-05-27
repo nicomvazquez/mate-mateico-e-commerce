@@ -9,13 +9,12 @@ function ProductsPage() {
     useProducts();
 
   return (
-    <div className="w-5/6 mx-auto py-8 gap-5">
+    <div className="md:w-5/6 w-full px-2 md:px-0 mx-auto py-8 gap-5">
       <div className="mb-5">
-        <h1 className="text-xl text-white pb-2">Filtrar por:</h1>
+        <h1 className="text-xl pb-2">Filtrar por:</h1>
         <select
           className="bg-[#1E2019] text-white w-full max-w-xs text-lg p-2 rounded-md "
           onChange={(e) => {
-            console.log(e.target.value);
             if (e.target.value == "todos") {
               getProducts();
             } else {
@@ -32,7 +31,7 @@ function ProductsPage() {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
         {products.map((product) => (
           <ProductCard product={product} key={product._id} />
         ))}

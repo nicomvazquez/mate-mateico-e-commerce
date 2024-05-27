@@ -7,9 +7,9 @@ import { useCart } from "../context/CartContext.jsx";
 
 function AdminProduct() {
   const [product, setProduct] = useState({});
-  
+
   const { getProductById } = useProducts();
-  
+
   const { id } = useParams();
 
   const navigate = useNavigate();
@@ -30,34 +30,36 @@ function AdminProduct() {
 
   return (
     <div className="w-full">
-      <div className="max-w-7xl bg-[#1E2019] m-auto my-10 flex p-10">
+      <div className="max-w-7xl m-auto gap-5 p-3 my-10 flex flex-col md:flex-row">
         <div>
           <img
-            className="max-w-xl w-screen"
-            src={`/api/img/${product.image}`}
+            className="w-full rounded-lg"
+            src={`api/img/${product.image}`}
             alt=""
           />
+          <h1 className="text-3xl mt-3">{product.name}</h1>
         </div>
-        <div className="pl-6 w-full flex flex-col justify-between">
+
+        <div className="w-full rounded-md p-3 border-2">
           <div>
-            <h1 className="text-white text-3xl">{product.name}</h1>
-            <p className="text-lg text-neutral-400 my-5">{product.description}</p>
+            <p className="text-xl text-neutral-600">{product.description}</p>
           </div>
+
           <div>
-            <p className="text-white text-5xl my-10">${product.price}</p>
-            <div className="flex w-full justify-between items-center bottom-0">
+            <p className="text-4xl my-10">${product.price}</p>
+
+            <div className="">
               <button
                 onClick={() => {
                   addToCart(product);
-                  navigate("/")
+                  navigate("/");
                 }}
-                className="bg-[#587B7F] hover:bg-[#385254] text-white font-bold py-2 px-4 rounded"
+                className="bg-[#ed6464] hover:bg-[#bf6370] transition-all  py-2 px-4 rounded"
               >
-                Add to Cart
+                Agregar al carrito
               </button>
-              <p className="text-xl text-white">
-                stock disponible: {product.stock}
-              </p>
+
+              <p className="text-lg text-neutral-400">stock disponible: {product.stock}</p>
             </div>
           </div>
         </div>

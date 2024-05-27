@@ -12,6 +12,7 @@ import ProductsPage from "./pages/ProductsPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
+import FinishPage from './pages/FinishPage.jsx'
 
 import Admin from "./pages/admin/Admin.jsx";
 import ProductForm from "./pages/admin/ProductForm.jsx";
@@ -31,6 +32,7 @@ function App() {
                 <Route path="login" element={<LoginPage />} />
                 <Route path="product/:id" element={<ProductPage />} />
                 <Route path="cart" element={<CartPage />} />
+                <Route path="checkout" element={<FinishPage />} />
               </Route>
 
               {/* Rutas dentro del área de administración */}

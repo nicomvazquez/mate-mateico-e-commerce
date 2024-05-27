@@ -6,7 +6,7 @@ import Foother from "../components/Foother.jsx";
 
 function Home() {
   return (
-    <div className="bg-[#394032] flex flex-col justify-between min-h-screen">
+    <div className="flex flex-col justify-between min-h-screen">
       <Navbar />
       <Outlet />
       <Foother />

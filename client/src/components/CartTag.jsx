@@ -17,17 +17,20 @@ function CartTag({ item }) {
   };
 
   return (
-    <div className="bg-[#1E2019] flex p-5 rounded-md">
-      <img src={`api/img/${item.product.image}`} alt="" className="max-w-xs" />
-      <div className="ml-5 flex flex-col justify-between">
+    <div className="max-w-md overflow-hidden transform hover:-translate-y-3 transition duration-300">
+      <img
+        src={`api/img/${item.product.image}`}
+        alt=""
+        className="w-full rounded-md"
+      />
+      <div>
         <div>
-          <h1 className="text-white font-semibold text-xl ">
-            {item.product.name}
-          </h1>
-          <p className="text-lg text-neutral-300 my-3">${item.product.price}</p>
+          <h1 className="font-semibold text-2xl ">{item.product.name}</h1>
+          <p className="text-lg text-neutral-400">${item.product.price}</p>
         </div>
-        <div className="flex gap-5">
-          <h1 className="text-white text-2xl">cantidad:</h1>
+
+        <div className="flex gap-5 my-3">
+          <label className="text-xl">cantidad:</label>
           <input
             type="number"
             min={1}
@@ -35,17 +38,17 @@ function CartTag({ item }) {
               handleQuantityChange(item.product._id, e);
             }}
             value={item.cuantity}
-            className="border-2 border-green-600 text-3xl rounded-md w-10"
+            className="border-2 border-black text-xl rounded-sm w-10"
           />
-          <button
-            onClick={() => {
-              removeFromCart(item.product);
-            }}
-            className="bg-red-600 px-3 py-2"
-          >
-            Eliminar
-          </button>
         </div>
+        <button
+          onClick={() => {
+            removeFromCart(item.product);
+          }}
+          className="bg-red-500 px-2 py-1 rounded-md"
+        >
+          Eliminar
+        </button>
       </div>
     </div>
   );
