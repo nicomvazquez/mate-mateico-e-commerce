@@ -30,11 +30,11 @@ function AdminProduct() {
 
   return (
     <div className="w-full">
-      <div className="max-w-7xl bg-[#1E2019] m-auto my-10 flex p-10">
+      <div className="max-w-7xl m-auto my-10 flex">
         <div>
           <img
-            className="w-full rounded-lg"
-            src={`api/img/${product.image}`}
+            className="w-full max-w-3xl rounded-lg"
+            src={`http://localhost:3000/api/img/${product.image}`}
             alt=""
           />
           <h1 className="text-3xl mt-3">{product.name}</h1>
