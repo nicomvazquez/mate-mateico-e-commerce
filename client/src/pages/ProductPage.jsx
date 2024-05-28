@@ -33,8 +33,8 @@ function AdminProduct() {
       <div className="max-w-7xl m-auto my-10 flex flex-col md:flex-row">
         <div>
           <img
-            className="w-full max-w-3xl rounded-lg"
-            src={`api/img/${product.image}`}
+            className="w-full max-w-4xl rounded-lg"
+            src={`/api/img/${product.image}`}
             alt=""
           />
           <h1 className="text-3xl mt-3">{product.name}</h1>
