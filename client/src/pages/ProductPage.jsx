@@ -29,12 +29,12 @@ function AdminProduct() {
   }, [getProductById, id]);
 
   return (
-    <div className="w-full">
-      <div className="max-w-7xl m-auto my-10 flex">
+    <div className="w-full px-3">
+      <div className="max-w-7xl m-auto my-10 flex flex-col md:flex-row">
         <div>
           <img
             className="w-full max-w-3xl rounded-lg"
-            src={`http://localhost:3000/api/img/${product.image}`}
+            src={`api/img/${product.image}`}
             alt=""
           />
           <h1 className="text-3xl mt-3">{product.name}</h1>
